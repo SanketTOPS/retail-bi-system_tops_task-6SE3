@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: retail-bi-system
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL
+        sync: false          # set in Render dashboard
+      - key: SECRET_KEY
+        sync: false          # set in Render dashboard
+      - key: LLM_API_KEY
+        sync: false          # your Gemini API key
+      - key: LLM_MODEL
+        value: gemini/gemini-3.1-flash-lite
+      - key: CORS_ORIGINS
+        value: https://retail-bi-system.onrender.com
+      - key: UPLOAD_DIR
+        value: uploads
+      - key: MAX_UPLOAD_SIZE_MB
+        value: "50"
+      - key: APP_ENV
+        value: production
+      - key: APP_VERSION
+        value: 1.0.0
+      - key: ALGORITHM
+        value: HS256
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "60"

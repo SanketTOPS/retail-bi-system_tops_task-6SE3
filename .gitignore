@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.so
+*.whl
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables – NEVER commit secrets
+.env
+.env.local
+.env.production
+.env.staging
+
+# Uploads
+backend/uploads/
+
+# Alembic versions (auto-generated – commit only if you version-control migrations)
+# alembic/versions/
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Vite build output
+frontend/dist/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Type stubs
+*.pyi
+
+# Scratch / temp files
+*.tmp
+*.bak
